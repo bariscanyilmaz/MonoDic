@@ -1,0 +1,46 @@
+<FlexboxLayout class="page">
+    <Label text="MonoDic" class="h1 title"></Label>
+    <TextField hint="Type a word" class="search-input" [(ngModel)]="word" returnKeyType="done" (returnPress)="search()"></TextField>
+    <StackLayout class="results">
+        <GridLayout height="80%">
+            <ScrollView orientation="vertical">
+                <StackLayout>
+                    <StackLayout *ngFor="let item of result.results" class="result">
+                        <FlexboxLayout class="word-type">
+                            <Label class="word h3" [text]="result.word">
+                            </Label>
+                            <Label class="word-speech" [text]="item.partOfSpeech"></Label>
+                        </FlexboxLayout>
+                        <Label class="word-definition" [text]="item.definition" textWrap="true">
+                        </Label>
+                        <StackLayout class="word-examples">
+                            <Label class="word-example" *ngFor="let example of item.examples" textWrap="true">
+                                <FormattedString>
+                                    <Span text="-&nbsp;">
+                                    </Span>
+                                    <Span [text]="example">
+                                    </Span>
+                                </FormattedString>
+                            </Label>
+                        </StackLayout>
+
+                        <FelxboxLayout>
+
+                            <FlexboxLayout *ngIf="item.synonyms" class="word-opposites">
+                                <Label class="cover" text="SYN"></Label>
+                                <Label class="syn" *ngFor="let syn of item.synonyms" [text]="syn"></Label>
+                            </FlexboxLayout>
+
+                            <FlexboxLayout *ngIf="item.antonyms" class="word-synonyms">
+                                <Label text="OPP" class="cover"></Label>
+                                <Label class="opp" *ngFor="let ant of item.antonyms" [text]="ant"></Label>
+                            </FlexboxLayout>
+
+                        </FelxboxLayout>
+
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
+    </StackLayout>
+</FlexboxLayout>

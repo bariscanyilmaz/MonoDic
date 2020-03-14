@@ -1,0 +1,21 @@
+<GridLayout rows="60,*">
+    <StackLayout row="0">
+        <Label text="MonoDic" class="h1 title"></Label>
+    </StackLayout>
+    <FlexboxLayout row="1" flexDirection="column" alignItems="center" justifyContent="center">
+        <Label class="h3" (tap)="open('http://www.bariscanyilmaz.com')">
+            <FormattedString>
+                <Span text="Developed by "></Span>
+                <Span text="Barış Can Yılmaz" fontSize="23" textDecoration="underline"></Span>
+            </FormattedString>
+        </Label>
+        <Label class="h3" (tap)="open('https://www.flaticon.com/authors/freepik')">
+            <FormattedString>
+                <Span text="Icon made by "></Span>
+                <Span text="Freepik " fontSize="16" textDecoration="underline"></Span>
+                <Span text="from "></Span>
+                <Span text=" www.flaticon.com"></Span>
+            </FormattedString>
+        </Label>
+    </FlexboxLayout>
+</GridLayout>

@@ -1,0 +1,69 @@
+/* Add mobile styles for the component here.  */
+.results {
+  margin-top: 10;
+  margin-bottom: 10;
+  height: auto;
+  min-width: 270;
+  width: 80%;
+}
+
+.result {
+  margin: 20 0;
+}
+
+.result-definition {
+  text-align: left;
+}
+
+.result-part {
+  text-align: right;
+}
+
+.word-type {
+  justify-content: space-around;
+  width: 100%;
+  min-width: 270;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+
+.word-speech {
+  color: #646b6a;
+}
+
+.word-definition {
+  text-align: center;
+  width: 100%;
+  min-width: 270;
+  word-wrap: break-word;
+  color: black;
+}
+
+.word-example {
+  margin-top: 10;
+  width: 100%;
+  min-width: 270;
+  text-align: center;
+}
+
+.cover {
+  width: 36;
+  height: 21;
+  background-color: #e7e990;
+  text-align: center;
+  color: white;
+}
+.word-opposites,
+.word-synonyms {
+  /* width: 100%;
+  min-width: 270; */
+  margin-top: 10;
+  flex-wrap: wrap;
+}
+
+
+.opp,.syn{
+  padding-left: 10;
+  border-radius: 7;
+}
+

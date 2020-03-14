@@ -1,0 +1,13 @@
+<GridLayout rows="*,40">
+    <FlexboxLayout class="page">
+        <Label text="MonoDic" class="h1 title"></Label>
+        <TextField hint="Type a word" class="search-input" returnKeyType="done" [(ngModel)]="word"></TextField>
+        <Button text="Search" class="btn btn-primary btn-rounded-lg btn-search" [isEnabled]="word!=null"
+            (tap)="search()">
+        </Button>
+    </FlexboxLayout>
+    <StackLayout row="1">
+        <Label alignSelf="flex-end" nsRouterLink="/credits" class="credit fa" pageTransition="slide"
+            clearHistory="false" text="&#xf059;"></Label>
+    </StackLayout>
+</GridLayout>
